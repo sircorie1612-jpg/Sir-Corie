@@ -1,0 +1,6 @@
+{
+  "name": "Drop Palm Oil - Pure Authentic Nigerian Palm Oil",
+  "description": "Pure, unadulterated palm oil made for delicious meals, trusted kitchens, and authentic Nigerian cooking. From palm plantation to bottle to your kitchen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

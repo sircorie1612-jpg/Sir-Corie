@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Sora", sans-serif;
+  --font-sans: "Sora", sans-serif;
+  --color-palm-950: #0d2216;
+  --color-palm-900: #153823;
+  --color-palm-800: #1c4b2f;
+  --color-palm-700: #25653f;
+  --color-palm-600: #318252;
+  --color-palm-100: #e7f3ec;
+  --color-palm-50: #f2f8f4;
+  --color-amber-gold: #e2821b;
+  --color-amber-dark: #b85d0d;
+  --color-cream-bg: #faf7f2;
+  --color-cream-surface: #f4efea;
+  --color-cream-light: #ffffff;
+  --color-earth-dark: #231f1a;
+  --color-earth-muted: #6a635a;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: "Sora", sans-serif;
+}
+
+* {
+  font-family: "Sora", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display, .font-serif {
+  font-family: "Sora", sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6cbbe;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5a492;
+}
+
+/* Ticker marquee animation for top notification bar */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Floating card animations for bottle cards, quality pillars, and price highlights */
+@keyframes hover-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes hover-float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-hover-float-1 {
+  animation: hover-float 4.2s ease-in-out infinite;
+}
+
+.animate-hover-float-2 {
+  animation: hover-float 4.8s ease-in-out 1.2s infinite;
+}
+
+.animate-hover-float-3 {
+  animation: hover-float 5.2s ease-in-out 2.4s infinite;
+}
+
+.animate-hover-float-4 {
+  animation: hover-float 4.6s ease-in-out 3.6s infinite;
+}
+
+.animate-float-subtle {
+  animation: hover-float-subtle 3.8s ease-in-out infinite;
+}
+
+.hover-float-card {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  will-change: transform;
+}
+
+.hover-float-card:hover {
+  animation-play-state: paused;
+}
+
+/* Drawdown dropdown animation for 4-dots sections navigation */
+@keyframes drawdown-slide {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-drawdown {
+  animation: drawdown-slide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Mobile responsive safeguards */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Vertical text helper */
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
